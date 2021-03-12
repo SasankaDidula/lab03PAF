@@ -10,7 +10,7 @@ public class item {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3309/items","root", "");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/items","root", "");
 			
 			//for testing
 			//System.out.println("Successfully connected");
@@ -107,13 +107,13 @@ public class item {
 				//buttons
 				output += "<td><form method='post' action='items.jsp'>"
 						+ "<input name='btnUpdate' "
-						+ " type='submit' value='Update'>"
+						+ " type='submit' value='Update' class='btn btn-success'>"
 						+ "<input name='itemID' type='hidden' "
 						+ " value='" + itemID + "'>" + "</form></td>"
 						
 						+ "<td><form method='post' action='items.jsp'>"
 						+ "<input name='btnRemove'"
-						+ " type='submit' value='Remove'>"
+						+ " type='submit' value='Remove' class='btn btn-danger'>"
 						+ "<input name='itemID' type='hidden' "
 						+ " value='" + itemID + "'>" + "</form></td></tr>";
 			}
